@@ -1,0 +1,10 @@
+#  密钥
+SUBSCRIPTION_KEY=07d5674f82db43deaed9d9c8a0c9be8a
+#  人员组创建 uri
+CREATE_PERSON_GROUP_URI=https://api.cognitive.azure.cn/face/v1.0/persongroups/
+#  人员创建和添加人脸 uri
+CREATE_PERSON_URI=https://api.cognitive.azure.cn/face/v1.0/persongroups/
+#  人脸检测 uri
+FACE_DETECTION=https://api.cognitive.azure.cn/face/v1.0/detect?returnFaceId=true&returnFaceLandmarks=false
+#  人脸验证 uri
+FACE_VERIFICATION=https://api.cognitive.azure.cn/face/v1.0/verify
