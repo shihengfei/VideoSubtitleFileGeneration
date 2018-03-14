@@ -6,7 +6,7 @@
 		<artifactId>qinmei-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>qinmei-face-service</artifactId>
+	<artifactId>qinmei-video-service</artifactId>
 	<packaging>war</packaging>
 
 	<dependencies>
@@ -43,8 +43,8 @@
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
-			<version>4.2.4</version>
 		</dependency>
+		
 		<!-- JSP相关 -->
 		<dependency>
 			<groupId>javax.servlet</groupId>

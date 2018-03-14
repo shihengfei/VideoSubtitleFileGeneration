@@ -5,6 +5,6 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
         <property name="java-output-path" value="/qinmei-manager-web/target/classes"/>
-        <property name="context-root" value="qinmei-face-service"/>
+        <property name="context-root" value="qinmei-video-service"/>
     </wb-module>
 </project-modules>

@@ -1,4 +1,4 @@
-package com.qinmei.test;
+
 
 import java.io.File;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.io.IOException;
 public class SRCCheck {
 
 	public static void main(String[] args){
-		 /*二、获取当前文件夹
+		 /* 获取当前文件夹
 		 *   这是获取相对路径的方法（常用），便于程序在不同的计算机OS中迁移
 		 *   获得当前工程所在文件夹，如本例中是D:\workspaceOfJavaEclipse\javaTest
 		 */

@@ -1,22 +1,22 @@
 package com.qinmei.pojo;
 
 /**
- * 验证后删除照片
+ * 上传后删除视频 
  * <p>Company: www.qinmei.com</p> 
  * @author 史恒飞 ，tel ： 18516417728
  * @version 1.0 ， 2018年2月28日上午10:30:43
  */
-public class DeleteImg {
+public class DeleteVideo {
 
 	/**
-	 * 图片链接
+	 * 视频链接
 	 */
 	private String url;
 	
 	/**
-	 * 图片存放位置
+	 * 视频存放位置
 	 */
-	private String imgLocation;
+	private String videoLocation;
 
 	public String getUrl() {
 		return url;
@@ -26,13 +26,12 @@ public class DeleteImg {
 		this.url = url;
 	}
 
-	public String getImgLocation() {
-		return imgLocation;
+	public String getVideoLocation() {
+		return videoLocation;
 	}
 
-	public void setImgLocation(String imgLocation) {
-		this.imgLocation = imgLocation;
+	public void setVideoLocation(String videoLocation) {
+		this.videoLocation = videoLocation;
 	}
-	
-	
+
 }

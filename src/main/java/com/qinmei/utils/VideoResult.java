@@ -14,8 +14,17 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  * @author 史恒飞 ，tel 18516417728
  * @version 1.0 ，@2018年1月10日上午9:38:55
  */
-public class FaceResult {
+public class VideoResult {
 
+	/*{200
+	 * "52c2678b18"
+	 * 
+	 * 400错误请求
+		  "ErrorType": "URL_UNREACHABLE",
+		  "Message": "Url 'http://mcf44p.natappfree.cc/upload/fuqin.mp4' is unreachable."
+		}*/
+	
+	
     // 定义jackson对象
     private static final ObjectMapper MAPPER = new ObjectMapper();
 
@@ -28,33 +37,33 @@ public class FaceResult {
     // 响应中的数据
     private Object data;
 
-    public static FaceResult build(Integer status, String msg, Object data) {
-        return new FaceResult(status, msg, data);
+    public static VideoResult build(Integer status, String msg, Object data) {
+        return new VideoResult(status, msg, data);
     }
 
-    public static FaceResult ok(Object data) {
-        return new FaceResult(data);
+    public static VideoResult ok(Object data) {
+        return new VideoResult(data);
     }
 
-    public static FaceResult ok() {
-        return new FaceResult(null);
+    public static VideoResult ok() {
+        return new VideoResult(null);
     }
 
-    public FaceResult() {
+    public VideoResult() {
 
     }
 
-    public static FaceResult build(Integer status, String msg) {
-        return new FaceResult(status, msg, null);
+    public static VideoResult build(Integer status, String msg) {
+        return new VideoResult(status, msg, null);
     }
 
-    public FaceResult(Integer status, String msg, Object data) {
+    public VideoResult(Integer status, String msg, Object data) {
         this.status = status;
         this.msg = msg;
         this.data = data;
     }
 
-    public FaceResult(Object data) {
+    public VideoResult(Object data) {
         this.status = 200;
         this.msg = "OK";
         this.data = data;
@@ -89,16 +98,16 @@ public class FaceResult {
     }
 
     /**
-     * 将json结果集转化为FaceResult对象
+     * 将json结果集转化为VideoResult对象
      * 
      * @param jsonData json数据
      * @param clazz FaceResult中的object类型
      * @return
      */
-    public static FaceResult formatToPojo(String jsonData, Class<?> clazz) {
+    public static VideoResult formatToPojo(String jsonData, Class<?> clazz) {
         try {
             if (clazz == null) {
-                return MAPPER.readValue(jsonData, FaceResult.class);
+                return MAPPER.readValue(jsonData, VideoResult.class);
             }
             JsonNode jsonNode = MAPPER.readTree(jsonData);
             JsonNode data = jsonNode.get("data");
@@ -122,9 +131,9 @@ public class FaceResult {
      * @param json
      * @return
      */
-    public static FaceResult format(String json) {
+    public static VideoResult format(String json) {
         try {
-            return MAPPER.readValue(json, FaceResult.class);
+            return MAPPER.readValue(json, VideoResult.class);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -138,7 +147,7 @@ public class FaceResult {
      * @param clazz 集合中的类型
      * @return
      */
-    public static FaceResult formatToList(String jsonData, Class<?> clazz) {
+    public static VideoResult formatToList(String jsonData, Class<?> clazz) {
         try {
             JsonNode jsonNode = MAPPER.readTree(jsonData);
             JsonNode data = jsonNode.get("data");

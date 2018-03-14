@@ -7,46 +7,37 @@
 <title>Insert title here</title>
 </head>
 <body>
-<!-- 上传图片格式 -->
-	<div>创建人脸到人员</div>
-	<form action="http://192.168.25.130:8080/qinmei-face-service/createFaceToPerson" method="post" enctype="multipart/form-data">
-		<input name="personId" type="text" >
-		<input name="img" type="file" >
+<!-- 上传视频格式 multipart,通过该接口直接获取处理完成后的视频链接 -->
+	<div>视频字幕添加</div><br>
+	<form action="http://2zbkd4.natappfree.cc/qinmei-video-service/getVideoURL" method="post" enctype="multipart/form-data">
+		<!-- 视频名称 -->
+		视频名称：<input name="videoName" type="text" ><br>
+		<!-- 视频是否公开，公开 Public，私有 Private -->
+		视频是否公开，公开 Public，私有 Private:<input name="privacy" type="text" ><br>
+		<!-- 视频母语，字幕生成语言，Chinese, -->
+		视频母语，字幕生成语言:<input name="language" type="text" ><br>
+		<input name="video" type="file" >
 		<input type="submit" value="提交" >
 	</form>
 	
-	<div>创建人员</div>
-	<form action="http://192.168.25.130:8080/qinmei-face-service/createPerson" method="post" >
-		人员名称:<input name="name" type="text" >
-		<input type="submit" value="提交" >
-	</form>
-
-	<div>验证</div>
-	<form action="http://192.168.25.130:8080/qinmei-face-service/faceVerification" method="post" enctype="multipart/form-data">
-		<input name="personId" type="text" >
-		<input name="img" type="file" >
+	<div>视频字幕文件获取</div><br>
+	<form action="http://2zbkd4.natappfree.cc/qinmei-video-service/getVideoId" method="post" enctype="multipart/form-data">
+		<!-- 视频名称 -->
+		视频名称：<input name="videoName" type="text" ><br>
+		<!-- 视频是否公开，公开 Public，私有 Private -->
+		视频是否公开，公开 Public，私有 Private:<input name="privacy" type="text" ><br>
+		<!-- 视频母语，字幕生成语言，Chinese, -->
+		视频母语，字幕生成语言:<input name="language" type="text" ><br>
+		<input name="video" type="file" >
 		<input type="submit" value="提交" >
 	</form>
 	
-	<div>快递查询</div>
-	<form action="http://192.168.25.130:8080/qinmei-face-service/expressQuery">
-		公司名：<input name="com" type="text" >
-		快递单号：<input name="nu" type="text">
-		<input type="submit" value="查询" >
+	<div>通过视频 id 获取对应语言字幕文件</div><br>
+	<form action="http://2zbkd4.natappfree.cc/qinmei-video-service/getVttUrl" method="post">
+		视频 id:<input name="id" type="text"><br>
+		字幕语言输入英文:<input name="language" type="text"><br>
+		<input type="submit" value="提交">
 	</form>
 	
-	<div>短信发送</div>
-	<form action="http://192.168.25.130:8080/qinmei-face-service/smsSend" method="post">
-		内容：<input name="msgContent" type="text" >
-		手机号：<input name="mobile" type="text">
-		<input type="submit" value="发送" >
-	</form>
-	
-	<!-- <div>测试图片地址</div>
-	<form action="http://139.196.179.141:8080/qinmei-face-service/imgtest" method="post" enctype="multipart/form-data">
-		<input name="personId" type="text" >
-		<input name="img" type="file" >
-		<input type="submit" value="提交" >
-	</form> -->
 </body>
 </html>
